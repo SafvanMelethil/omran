@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Omran Mohammad</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <link rel="stylesheet" href="css/lightgallery.min.css">    
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+  <link rel="stylesheet" href="css/swiper.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+ <!-- Loader Section -->
+ <div id="loader" class="loader">
+  <div class="round-loader">
+      <!-- Image icon (replace with your image URL) -->
+      <img src="diaphragm.png" alt="Camera Icon" class="camera-icon">
+  </div>
+</div>
+
+  
+  <style>
+
+  </style>
+
+  <script>
+   // Wait for 5 seconds, then remove the loader and show the page content
+window.addEventListener('load', function () {
+    setTimeout(function () {
+        // Add the 'loaded' class to fade out the loader
+        document.body.classList.add('loaded');
+    }, 1500); // Loader is visible for 5 seconds
+});
+
+
+  </script>
+ <div class="site-wrap">
+
+  <div class="site-mobile-menu">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+
+    <header class="site-navbar py-3" role="banner">
+
+      <div class="container-fluid">
+        <div class="row align-items-center">
+
+          <div class="col-6 col-xl-2" data-aos="fade-down">
+            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">Omran Mohammad</a></h1>
+          </div>
+          <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
+            <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
+
+              <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li class="has-children">
+                  <a href="#">Gallery</a>
+                  <ul class="dropdown">
+                    <li><a href="beauty.html">Beauty</a></li>
+                    <li><a href="commercial.html">Commercial</a></li>
+                    <li><a href="coverage.html">Coverage</a></li>
+                    <li><a href="editorial.html">Editorial</a></li>
+                    <li><a href="portrait.html">Portrait</a></li>
+                    <li><a href="studio.html">Studio</a></li>
+
+                    
+                   
+                  </ul>
+                </li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
+            <div class="d-none d-xl-inline-block">
+              <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
+                <li>
+                  <a href="https://wa.me/+966545469322?text=Hi%20this%20is%20a%20work%20enquiry" class="pl-0 pr-3" target="_blank">
+                    <span class="icon-whatsapp"></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/omranphotographer/" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+          </div>
+
+        </div>
+      </div>
+      
+    </header>
+
+
+    <div class="slider-container">
+      <div class="overlay"></div>
+      <div class="slide active" style="background-image: url('Editorial/1.jpg');"></div>
+      <div class="slide" style="background-image: url('coverage/1.jpg');"></div>
+      <div class="slide" style="background-image: url('beauty/hind/3.jpg');"></div>
+      <div class="slide" style="background-image: url('commercial/8.JPG');"></div>
+      <div class="slide" style="background-image: url('portrait/23.jpg');"></div>
+  
+      <div class="content">
+        <h1>I'm Omran Mohammed</h1>
+        <h2 id="profession">Photographer</h2>
+        <div class="mouse-icon" onclick="scrollToSection()">
+          <div></div>
+        </div>
+      </div>
+    </div>
+ </div>
+
+
+   
+   <script>
+   const slides = document.querySelectorAll('.slide');
+    const professionElement = document.getElementById('profession');
+    const professions = ['Photographer', 'Videographer', 'Drone Controller', 'Producer', 'Art Director'];
+    let currentSlide = 0;
+
+    function changeSlide() {
+      slides.forEach((slide, index) => {
+        slide.classList.remove('active');
+        if (index === currentSlide) slide.classList.add('active');
+      });
+      professionElement.textContent = professions[currentSlide];
+      currentSlide = (currentSlide + 1) % slides.length;
+    }
+
+    setInterval(changeSlide, 3000); // Change every 3 seconds
+
+    function scrollToSection() {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth',
+      });
+    }
+
+   </script>
+
+
+</head>
+
+
+
+<script>
+function createParticles(e) {
+  const particleCount = 60; // More particles for a dynamic effect
+  const container = document.getElementById('bg-container');
+  const mouseX = e.clientX || e.touches[0].clientX;
+  const mouseY = e.clientY || e.touches[0].clientY;
+
+  for (let i = 0; i < particleCount; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    
+    const size = Math.random() * 10 + 5;
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    particle.style.left = `${mouseX - size / 2}px`;
+    particle.style.top = `${mouseY - size / 2}px`;
+
+    const angle = Math.random() * 360;
+    const distance = Math.random() * 150 + 50; // More scatter for fluidity
+    const x = distance * Math.cos(angle);
+    const y = distance * Math.sin(angle);
+
+    particle.style.setProperty('--x', `${x}px`);
+    particle.style.setProperty('--y', `${y}px`);
+
+    container.appendChild(particle);
+
+    // Remove particle after animation
+    setTimeout(() => {
+      particle.remove();
+    }, 1500);
+  }
+}
+
+const container = document.getElementById('bg-container');
+container.addEventListener('mousemove', createParticles);
+container.addEventListener('touchmove', createParticles);
+</script>
+
+
+
+
+<body>
+
+ 
+
+  <div class="clients-container">
+    <div class="background-text">My Clients</div>
+  <div class="clients-list">
+      <!-- Add your client names here -->
+      <span class="client-name">Tom Ford</span>
+      <span class="client-name">Malvie Magazine</span>
+      <span class="client-name">Hia Magazine</span>
+      <span class="client-name">diesel</span>
+      <span class="client-name">Clara</span>
+      <span class="client-name">SPL</span>
+      <span class="client-name">Vichy</span>
+      <span class="client-name">Bujairy</span>
+      <span class="client-name">White Eleven</span>
+      <span class="client-name">Dyptique</span>
+      <span class="client-name">Mobily</span>
+      <span class="client-name">Femi9</span>
+      <span class="client-name">STC</span>
+      <span class="client-name">Loreal</span>
+      <span class="client-name">Nars</span>
+      <span class="client-name">Messika</span>
+      <span class="client-name">Aenan</span>
+      <span class="client-name">AeNoble & Freshnan</span>
+      <span class="client-name">Riyadh Fashion Week</span>
+      <span class="client-name">Courtyard Hotel</span>
+      <span class="client-name">Eman alajlan</span>
+      <span class="client-name">Motorolla</span>
+      <span class="client-name">Aram Design</span>
+      <span class="client-name">Qiddiya Football</span>
+      <span class="client-name">Audemars Piguet</span>
+      <span class="client-name">Saint Louis</span>
+      <span class="client-name">Bujairi Terrace</span>
+      <span class="client-name">Joy Awards</span>
+  </div>
+  </div>
+
+  <div class="background-container" id="bg-container">
+    <h1 class="custom-heading">STAND OUT YOUR WAY.</h1>
+    </div>
+
+<div class="container-fluid" data-aos="fade" data-aos-delay="500">
+  <div class="row">
+    <!-- First Row (3 Columns) -->
+    <div class="col-lg-4 mb-4">
+      <div class="image-wrap-2">
+        <div class="image-info">
+          <h2 class="mb-3">Beauty</h2>
+          <a href="beauty.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+        </div>
+        <img src="beauty/hind/6.jpg" alt="Image" class="img-fluid equal-height">
+      </div>
+    </div>
+
+    <div class="col-lg-4 mb-4">
+      <div class="image-wrap-2">
+        <div class="image-info">
+          <h2 class="mb-3">Commercial</h2>
+          <a href="commercial.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+        </div>
+        <img src="commercial/7.jpg" alt="Image" class="img-fluid equal-height">
+      </div>
+    </div>
+
+    <div class="col-lg-4 mb-4">
+      <div class="image-wrap-2">
+        <div class="image-info">
+          <h2 class="mb-3">Coverage</h2>
+          <a href="coverage.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+        </div>
+        <img src="coverage/20.jpg" alt="Image" class="img-fluid equal-height">
+      </div>
+    </div>
+
+    <div class="col-lg-4 mb-4">
+      <div class="image-wrap-2">
+        <div class="image-info">
+          <h2 class="mb-3">Editorial</h2>
+          <a href="editorial.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+        </div>
+        <img src="Editorial/13.JPG" alt="Image" class="img-fluid equal-height">
+      </div>
+    </div>
+
+    <div class="col-lg-4 mb-4">
+      <div class="image-wrap-2">
+        <div class="image-info">
+          <h2 class="mb-3">Portrait</h2>
+          <a href="portrait.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+        </div>
+        <img src="portrait/16.jpg" alt="Image" class="img-fluid equal-height">
+      </div>
+    </div>
+
+    <div class="col-lg-4 mb-4">
+      <div class="image-wrap-2">
+        <div class="image-info">
+          <h2 class="mb-3">Studio</h2>
+          <a href="studio.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+        </div>
+        <img src="studio/17.jpg" alt="Image" class="img-fluid equal-height">
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css"> <!-- Dark theme -->
+
+
+  <div class="page-container">
+    <h1>Book Your Slot</h1>
+    <button class="book-btn" id="bookBtn">Book Now</button>
+    <!-- Calendar Container initially hidden -->
+    <div id="calendarContainer">
+    </div>
+  </div>
+
+  <script>
+    // Initialize Flatpickr
+    let calendarInstance;
+
+    document.getElementById("bookBtn").addEventListener("click", function () {
+      // Create Flatpickr dynamically if not already created
+      if (!calendarInstance) {
+        const calendarContainer = document.getElementById("calendarContainer");
+
+        calendarInstance = flatpickr(calendarContainer, {
+          inline: true,
+          theme: "dark", // Black theme
+          onChange: function (selectedDates, dateStr) {
+            if (dateStr) {
+              const phone = "+966545469322"; // Replace with your WhatsApp number
+              const message = `Hi Omran, I would Like to get your time for a work on ${dateStr}`;
+              const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+              window.open(whatsappURL, "_blank");
+            }
+          },
+        });
+      }
+
+      // Toggle the calendar visibility near the button
+      const calendarElement = document.getElementById("calendarContainer");
+      if (calendarElement.style.display === "block") {
+        calendarElement.style.display = "none"; // Hide if already visible
+      } else {
+        calendarElement.style.display = "block"; // Show if hidden
+      }
+    });
+
+    // Close button functionality
+    document.getElementById("closeBtn").addEventListener("click", function () {
+      document.getElementById("calendarContainer").style.display = "none";
+    });
+  </script>
+
+      <div class="footer py-4">
+        <div class="container-fluid text-center">
+          <p>
+            
+            Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | Site by <a href="https://safvanmelethil.github.io/portfolio/" target="_blank" >Safvan Melethil</a>
+           
+          </p>
+        </div>
+      </div>
+  
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/picturefill.min.js"></script>
+  <script src="js/lightgallery-all.min.js"></script>
+  <script src="js/jquery.mousewheel.min.js"></script>
+
+  <script src="js/main.js"></script>
+  
+  <script>
+    $(document).ready(function(){
+      $('#lightgallery').lightGallery();
+    });
+  </script>
+
+</body>
+</html>
