@@ -126,11 +126,13 @@ window.addEventListener('load', function () {
 
     <div class="slider-container">
       <div class="overlay"></div>
-      <div class="slide active" style="background-image: url('Editorial/1.jpg');"></div>
-      <div class="slide" style="background-image: url('coverage/1.JPG');"></div>
-      <div class="slide" style="background-image: url('beauty/hind/3.JPG');"></div>
-      <div class="slide" style="background-image: url('commercial/8.JPG');"></div>
-      <div class="slide" style="background-image: url('portrait/23.jpg');"></div>
+      <div class="slide active" data-mobile="Editorial/1.jpg" data-desktop="Editorial/9.jpg"></div>
+      <div class="slide" data-mobile="Editorial/30.jpg" data-desktop="beauty/od/5.JPG"></div>
+      <div class="slide" data-mobile="Editorial/7.jpg" data-desktop="portrait/13.jpg"></div>
+      <div class="slide" data-mobile="commercial/6.JPG" data-desktop="commercial/8.JPG"></div>
+      <div class="slide" data-mobile="portrait/4..jpg" data-desktop="coverage/3.JPG"></div>
+    
+    
   
       <div class="content">
         <h1>I'm Omran Mohammed</h1>
@@ -167,6 +169,22 @@ window.addEventListener('load', function () {
         behavior: 'smooth',
       });
     }
+
+    function updateSlideImages() {
+  var slides = document.querySelectorAll(".slide");
+  var isMobile = window.innerWidth <= 768; // Define mobile screen size
+
+  slides.forEach(slide => {
+    var imageUrl = isMobile ? slide.getAttribute("data-mobile") : slide.getAttribute("data-desktop");
+    slide.style.backgroundImage = `url(${imageUrl})`;
+  });
+}
+
+// Run on page load
+updateSlideImages();
+
+// Run on window resize
+window.addEventListener("resize", updateSlideImages);
 
    </script>
 
@@ -269,7 +287,7 @@ container.addEventListener('touchmove', createParticles);
           <h2 class="mb-3">Beauty</h2>
           <a href="beauty.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
         </div>
-        <img src="beauty/hind/6.JPG" alt="Image" class="img-fluid equal-height">
+        <img src="beauty/hind/8.JPG" alt="Image" class="img-fluid equal-height">
       </div>
     </div>
 
@@ -279,7 +297,7 @@ container.addEventListener('touchmove', createParticles);
           <h2 class="mb-3">Commercial</h2>
           <a href="commercial.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
         </div>
-        <img src="commercial/7.JPG" alt="Image" class="img-fluid equal-height">
+        <img src="commercial/4.JPG" alt="Image" class="img-fluid equal-height">
       </div>
     </div>
 
@@ -289,7 +307,7 @@ container.addEventListener('touchmove', createParticles);
           <h2 class="mb-3">Coverage</h2>
           <a href="coverage.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
         </div>
-        <img src="coverage/20.JPG" alt="Image" class="img-fluid equal-height">
+        <img src="coverage/20.jpg" alt="Image" class="img-fluid equal-height">
       </div>
     </div>
 
@@ -299,7 +317,7 @@ container.addEventListener('touchmove', createParticles);
           <h2 class="mb-3">Editorial</h2>
           <a href="editorial.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
         </div>
-        <img src="Editorial/13.jpg" alt="Image" class="img-fluid equal-height">
+        <img src="Editorial/6.JPG" alt="Image" class="img-fluid equal-height">
       </div>
     </div>
 
@@ -319,7 +337,7 @@ container.addEventListener('touchmove', createParticles);
           <h2 class="mb-3">Studio</h2>
           <a href="studio.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
         </div>
-        <img src="studio/17.JPG" alt="Image" class="img-fluid equal-height">
+        <img src="studio/17.jpg" alt="Image" class="img-fluid equal-height">
       </div>
     </div>
   </div>
